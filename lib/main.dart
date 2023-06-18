@@ -15,7 +15,6 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.black38,
       ),
       body: Container(
-        alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,19 +23,19 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               margin: EdgeInsets.all(10.0),
               color: Colors.black12,
-              child: Text("Hello world", style: TextStyle(fontWeight: FontWeight.bold)),
+              child: Center(child: ElevatedButton(child: Text("Click me"), onPressed: (){},)),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
               margin: EdgeInsets.all(10.0),
               color: Colors.black12,
-              child: ElevatedButton(child: Text("Click me"), onPressed: (){},),
+              child: Center(child: Text("This is my container", style: TextStyle(fontWeight: FontWeight.bold))),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
               margin: EdgeInsets.all(10.0),
               color: Colors.black12,
-              child: Text("This is my container", style: TextStyle(fontWeight: FontWeight.bold)),
+              child: Center(child: Text("Hello world", style: TextStyle(fontWeight: FontWeight.bold))),
             ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 50.0, 0, 0),
