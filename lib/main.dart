@@ -16,23 +16,56 @@ class Home extends StatelessWidget {
       ),
       body: Container(
         alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Hello world!"),
-            ElevatedButton(
-              onPressed: (){},
-              child: Text("Click me!"),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.orangeAccent),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              margin: EdgeInsets.all(10.0),
+              color: Colors.black12,
+              child: Text("Hello world", style: TextStyle(fontWeight: FontWeight.bold)),
             ),
             Container(
-              color: Colors.cyan,
-              padding: EdgeInsets.all(30.0),
-              child: Text("Inside of the container"),
+              padding: EdgeInsets.all(20.0),
+              margin: EdgeInsets.all(10.0),
+              color: Colors.black12,
+              child: ElevatedButton(child: Text("Click me"), onPressed: (){},),
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              margin: EdgeInsets.all(10.0),
+              color: Colors.black12,
+              child: Text("This is my container", style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 50.0, 0, 0),
+              width: MediaQuery.of(context).size.width,
+              child: ElevatedButton(
+                onPressed: (){},
+                child: Text("Button 1"),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.lime),
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: ElevatedButton(
+                onPressed: (){},
+                child: Text("Button 2"),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.orangeAccent),
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: ElevatedButton(
+                onPressed: (){},
+                child: Text("Button 3"),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.teal),
+              ),
             ),
           ],
         ),
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
