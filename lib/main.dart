@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'package:flutter/material.dart';
 
 void main() =>  runApp(MaterialApp(
@@ -12,59 +13,32 @@ class Home extends StatelessWidget {
         title: Text("myapp"),
         centerTitle: true,
         backgroundColor: Colors.black38,
-        leading: PopupMenuButton<String>(
-          icon: Icon(Icons.message),
-          onSelected: (value) {
-            final snackBar = SnackBar(
-              content: Text('Seçilen öğe: $value'),
-              duration: Duration(milliseconds: 200),
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          },
-          itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-            PopupMenuItem<String>(
-              value: 'Seçenek 1',
-              child: Text('Seçenek 1'),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Hello world!"),
+            ElevatedButton(
+              onPressed: (){},
+              child: Text("Click me!"),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orangeAccent),
             ),
-            PopupMenuItem<String>(
-              value: 'Seçenek 2',
-              child: Text('Seçenek 2'),
-            ),
-            PopupMenuItem<String>(
-              value: 'Seçenek 3',
-              child: Text('Seçenek 3'),
+            Container(
+              color: Colors.cyan,
+              padding: EdgeInsets.all(30.0),
+              child: Text("Inside of the container"),
             ),
           ],
         ),
       ),
-
-
-      body: Container(
-        color: Colors.black12,
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          margin: EdgeInsets.symmetric(horizontal: 100.0,vertical: 300.0),
-          alignment: Alignment.center,
-          color: Colors.black26,
-          child: Text(
-            "Hello World",
-            style: TextStyle(
-              fontSize: 15.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ),
-
-
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-
-        },
+        onPressed: () {},
         child: Text("Click"),
         backgroundColor: Colors.orangeAccent,
       ),
     );
   }
-
 }
