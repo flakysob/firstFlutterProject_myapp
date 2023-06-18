@@ -16,9 +16,36 @@ class Home extends StatelessWidget {
       ),
       body: Row(
         children: [
-          Container(),
-          Container(),
-          Container(),
+          Expanded(
+              child: Image.asset(
+                  "assets/1.jpg",
+              ),
+            flex: 3,
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.orangeAccent,
+              child: Text("1"),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text("2"),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text("3"),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
